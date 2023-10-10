@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pixelify+Sans">
+    <style>
+        /* SETUP & RESET */
+        html {
+            color-scheme: light dark;
+        }
+
+        /* COLOR SETUP */
+        @media (prefers-color-scheme: light) {
+            :root {
+                --text: #010f1e;
+                --background: #e1effe;
+                --primary: #1e8cfa;
+                --secondary: #b4d9fd;
+                --accent: #0573e1;
+            }
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #e1effe;
+                --background: #010f1e;
+                --primary: #0573e1;
+                --secondary: #02264b;
+                --accent: #1e8cfa;
+            }
+        }
+        /* END COLOR SETUP */
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            font-family: "Pixelify Sans";
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1.2;
+            background-color: var(--background)
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+            &::before, &::after {
+                content: '';
+                content: none;
+            }
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        /* TEXT SETUP */
+        h1 {
+            font-size: 13rem;
+            color: var(--primary);
+        }
+        h2 {
+            font-size: 8rem;
+            color: var(--text)
+        }
+        h3 {
+            font-size: 5rem;
+            color: var(--primary)
+        }
+        h4 {
+            font-size: 3rem;
+            color: var(--text)
+        }
+        h5 {
+            font-size: 2rem;
+            color: var(--text)
+        }
+        h6 {
+            font-size: 1rem;
+            color: var(--accent)
+        }
+        p {
+            font-size: 1rem;
+            color: var(--text)
+        }
+        /* END RESET */
+
+        /* Site Specific */
+        h1, h3, h5 {
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            
+        }
+        h5 {
+            filter: drop-shadow(var(--background) .1em .1em 0);
+        }
+        main {
+            display:flex;
+            flex-direction: column;
+            text-align: center;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--background));
+        }
+        .overlay {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('jwes.jpg');
+            background-position: left bottom;
+        }
+        .left {
+            height:25dvh;
+            width:100dvw;
+            > h3 {
+            padding-top:5dvh;
+            text-shadow: var(--background) .05em .05em 0;
+            }
+        }
+        .right {
+            height:70dvh;
+            width:100dvw;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            padding-bottom:5dvh;
+        }
+        .social {
+            width: 3rem;
+            padding: .5rem;
+            /* filter: drop-shadow(var(--text) .2em .2em 0); */
+        }
+        @media (min-width:640px) {
+            main {
+                flex-direction: row;
+            }
+            .overlay {
+                background-position: left 60%;
+            }
+            .left, .right {
+                height:95dvh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <header>
+        <h1>I'm JWes</h1>
+        <h2>I'm JWes</h2>
+        <h3>I'm JWes</h3>
+        <h4>I'm JWes</h4>
+        <h5>I'm JWes</h5>
+        <p>I'm Wes Campbell</p>
+        <h6>I'm JWes</h6>
+    </header> -->
+    <div class="overlay">
+    <main>
+        <section class="left">
+            <h3 class="intro">I'm jwes</h3>
+        </section>
+        <section class="right">
+            <article class="sub-left">
+                <h5>Contribute</h5>
+                <svg class="social" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#5ac561"><title>Cash App</title><path d="M23.59 3.475a5.1 5.1 0 00-3.05-3.05c-1.31-.42-2.5-.42-4.92-.42H8.36c-2.4 0-3.61 0-4.9.4a5.1 5.1 0 00-3.05 3.06C0 4.765 0 5.965 0 8.365v7.27c0 2.41 0 3.6.4 4.9a5.1 5.1 0 003.05 3.05c1.3.41 2.5.41 4.9.41h7.28c2.41 0 3.61 0 4.9-.4a5.1 5.1 0 003.06-3.06c.41-1.3.41-2.5.41-4.9v-7.25c0-2.41 0-3.61-.41-4.91zm-6.17 4.63l-.93.93a.5.5 0 01-.67.01 5 5 0 00-3.22-1.18c-.97 0-1.94.32-1.94 1.21 0 .9 1.04 1.2 2.24 1.65 2.1.7 3.84 1.58 3.84 3.64 0 2.24-1.74 3.78-4.58 3.95l-.26 1.2a.49.49 0 01-.48.39H9.63l-.09-.01a.5.5 0 01-.38-.59l.28-1.27a6.54 6.54 0 01-2.88-1.57v-.01a.48.48 0 010-.68l1-.97a.49.49 0 01.67 0c.91.86 2.13 1.34 3.39 1.32 1.3 0 2.17-.55 2.17-1.42 0-.87-.88-1.1-2.54-1.72-1.76-.63-3.43-1.52-3.43-3.6 0-2.42 2.01-3.6 4.39-3.71l.25-1.23a.48.48 0 01.48-.38h1.78l.1.01c.26.06.43.31.37.57l-.27 1.37c.9.3 1.75.77 2.48 1.39l.02.02c.19.2.19.5 0 .68z"/></svg>
+                <svg class="social" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#e7705b"><title>Patreon</title><path d="M22.957 7.21c-.004-3.064-2.391-5.576-5.191-6.482-3.478-1.125-8.064-.962-11.384.604C2.357 3.231 1.093 7.391 1.046 11.54c-.039 3.411.302 12.396 5.369 12.46 3.765.047 4.326-4.804 6.068-7.141 1.24-1.662 2.836-2.132 4.801-2.618 3.376-.836 5.678-3.501 5.673-7.031Z"/></svg>
+                <svg class="social" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#2a3a7c"><title>PayPal</title><path d="M7.016 19.198h-4.2a.562.562 0 0 1-.555-.65L5.093.584A.692.692 0 0 1 5.776 0h7.222c3.417 0 5.904 2.488 5.846 5.5-.006.25-.027.5-.066.747A6.794 6.794 0 0 1 12.071 12H8.743a.69.69 0 0 0-.682.583l-.325 2.056-.013.083-.692 4.39-.015.087zM19.79 6.142c-.01.087-.01.175-.023.261a7.76 7.76 0 0 1-7.695 6.598H9.007l-.283 1.795-.013.083-.692 4.39-.134.843-.014.088H6.86l-.497 3.15a.562.562 0 0 0 .555.65h3.612c.34 0 .63-.249.683-.585l.952-6.031a.692.692 0 0 1 .683-.584h2.126a6.793 6.793 0 0 0 6.707-5.752c.306-1.95-.466-3.744-1.89-4.906z"/></svg>
+                <svg class="social" role="img" viewBox="0 0 70.91 75.54" xmlns="http://www.w3.org/2000/svg" fill="#5593c9"><title>Venmo</title><path d="m66.9,0c2.757,4.544,4.146,9.787,4,15.1,0,18.82-16.07,43.27-29.1,60.44H12L0,4.12,26.11,1.64l6.31,50.82c5.9-9.61,13.18-24.72,13.18-35,0-5.63-1-9.47-2.47-12.64L66.9,0Z"/></svg>
+            </article>
+            <section class="sub-right">
+                <h5>Social</h5>
+                <svg class="social" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#2a3a7c"><title>Facebook</title><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <svg class="social" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                <svg class="social" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#e74c5d"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+            </section>
+        </section>
+    </main>
+    </div>
+</body>
+
+</html>
